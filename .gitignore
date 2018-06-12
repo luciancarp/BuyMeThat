@@ -1,0 +1,17 @@
+.gradle
+!gradle/wrapper/gradle-wrapper.jar
+
+client/node_modules
+
+build
+
+server/build
+
+### User specific IntelliJ IDEA files ###
+.idea/workspace.xml
+.idea/watcherTasks.xml
+.idea/dictionaries/
+.idea/modules/
+.idea/libraries/
+.idea/dataSources/
+.idea/dataSources*

@@ -1,0 +1,23 @@
+task prepareToDeploy(
+        dependsOn: [
+            ':server:bootJar',
+            ':client:build',
+            ':copyToWeb',
+            ':copyToApi',
+        ])
+
+task setupDev(
+        dependsOn: [
+                ':server:bootJar',
+                ':client:yarn_install',
+        ])
+
+task copyToWeb(type: Copy) {
+    from 'client/build'
+    into 'build/web'
+}
+
+task copyToApi(type: Copy) {
+    from 'server/build/libs'
+    into 'build/api'
+}
